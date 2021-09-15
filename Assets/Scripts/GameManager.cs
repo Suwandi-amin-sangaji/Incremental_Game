@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Perubahan Dikit Di CheckResourceCost
     private void CheckResourceCost()
     {
         foreach (ResourceController resource in _activeResources)
