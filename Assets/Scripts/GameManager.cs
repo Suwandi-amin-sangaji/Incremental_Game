@@ -91,20 +91,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void CheckResourceCost ()
+    private void CheckResourceCost()
     {
         foreach (ResourceController resource in _activeResources)
         {
             bool isBuyable = false;
             if (resource.IsUnlocked)
             {
-                isBuyable = TotalGold >= resource.GetUpgradeCost ();
+                isBuyable = TotalGold >= resource.GetUpgradeCost();
             }
             else
             {
-                isBuyable = TotalGold >= resource.GetUnlockCost ();
-                resource.ResourceImage.sprite = ResourcesSprites[isBuyable ? 1 : 0];
-            }     
+                isBuyable = TotalGold >= resource.GetUnlockCost();
+            }
+            resource.ResourceImage.sprite = ResourcesSprites[isBuyable ? 1 : 0];
         }
     }
 
